@@ -1,0 +1,342 @@
+<!--
+    Author: Huy Mac - 000775402
+    Date: October 9, 2019
+    Statement of authorship: This is my own work
+    Pupose: Displaying the memory pokemon card game, it helps players improve their memory ability.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Memory Card Game</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="./game.js"></script>
+</head>
+<body>
+    <h1 id="welcome">Welcome to Pokemon Card Memory Game</h1>
+    <form method="GET" id="infoform">
+        <fieldset>
+                <h2>PLAYER INFORMATION</h2>
+            <table>
+                <tr>
+                    <td>
+                        <label for="playerName">Player Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="playerName" id="playerName" maxlength="25" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="playerAge">Player Age:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="playerAge" id="playerAge"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="playerColor">Color:</label>
+                    </td>
+                    <td>
+                        <input type="color" name="playerColor" id="playerColor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="playerLevel">Level:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="playerLevel" id="playerLevel" value="1" min="1" max="3"/>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Let's Play" id="submitButton"/>
+        </fieldset>
+    </form>
+    <h1 id="message"></h1>
+    <h1 id="playername1"></h1>
+    <h2 id="help-label">?HELP?</h2>
+
+    <div id="help">
+        
+        <div>
+            <ol>
+                <li>Using your mouse to click on each card.</li> 
+                <li>The card will flip to the picture face.</li>
+                <li>Trying to remmeber that card, and look for the same other pokemon card.</li>
+                <li>If those cards are matched, it will keep in the picture face.</li>
+                <li>Keeping look for the other matched cards until ending game.</li>
+            </ol>
+        </div>
+    </div>
+    <section class="pokemonGame1" id="pokemonGame1">
+
+        <div class="pokemonCard" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+
+    </section>
+
+    <section class="pokemonGame2" id="pokemonGame2">
+
+        <div class="pokemonCard2" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        </div>
+        <div class="pokemonCard2" data-img="pic7">
+            <img class="frontFace" src="image/pic7.jpg" alt="Picture7"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic7">
+            <img class="frontFace" src="image/pic7.jpg" alt="Picture7"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic8">
+            <img class="frontFace" src="image/pic8.jpg" alt="Picture8"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic8">
+            <img class="frontFace" src="image/pic8.jpg" alt="Picture8"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic9">
+            <img class="frontFace" src="image/pic9.jpg" alt="Picture9"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic9">
+            <img class="frontFace" src="image/pic9.jpg" alt="Picture9"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic10">
+            <img class="frontFace" src="image/pic10.jpg" alt="Picture10"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard2" data-img="pic10">
+            <img class="frontFace" src="image/pic10.jpg" alt="Picture10"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+
+    </section>
+        
+    <section class="pokemonGame3" id="pokemonGame3">
+        <div class="pokemonCard3" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic1">
+            <img class="frontFace" src="image/pic1.jpg" alt="Picture1"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic2">
+            <img class="frontFace" src="image/pic2.jpg" alt="Picture2"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic3">
+            <img class="frontFace" src="image/pic3.jpg" alt="Picture3"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic4">
+            <img class="frontFace" src="image/pic4.jpg" alt="Picture4"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic5">
+            <img class="frontFace" src="image/pic5.jpg" alt="Picture5"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic6">
+            <img class="frontFace" src="image/pic6.jpg" alt="Picture6"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic7">
+            <img class="frontFace" src="image/pic7.jpg" alt="Picture7"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic7">
+            <img class="frontFace" src="image/pic7.jpg" alt="Picture7"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic8">
+            <img class="frontFace" src="image/pic8.jpg" alt="Picture8"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic8">
+            <img class="frontFace" src="image/pic8.jpg" alt="Picture8"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic9">
+            <img class="frontFace" src="image/pic9.jpg" alt="Picture9"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic9">
+            <img class="frontFace" src="image/pic9.jpg" alt="Picture9"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic10">
+            <img class="frontFace" src="image/pic10.jpg" alt="Picture10"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic10">
+            <img class="frontFace" src="image/pic10.jpg" alt="Picture10"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic11">
+            <img class="frontFace" src="image/pic11.jpg" alt="Picture11"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic11">
+            <img class="frontFace" src="image/pic11.jpg" alt="Picture11"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic12">
+            <img class="frontFace" src="image/pic12.jpg" alt="Picture12"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic12">
+            <img class="frontFace" src="image/pic12.jpg" alt="Picture12"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic13">
+            <img class="frontFace" src="image/pic13.jpg" alt="Picture13"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic13">
+            <img class="frontFace" src="image/pic13.jpg" alt="Picture13"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic14">
+            <img class="frontFace" src="image/pic14.jpg" alt="Picture14"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic14">
+            <img class="frontFace" src="image/pic14.jpg" alt="Picture14"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic15">
+            <img class="frontFace" src="image/pic15.jpg" alt="Picture15"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+        <div class="pokemonCard3" data-img="pic15">
+            <img class="frontFace" src="image/pic15.jpg" alt="Picture15"/>
+            <img class="backFace" src="image/PokeBall.jpg" alt="Pokemon Ball"/>
+        </div>
+
+    </section>
+
+    <h1 id="win"></h1>
+    <button id="playagain">Play Again</button>
+    
+</body>
+</html>
